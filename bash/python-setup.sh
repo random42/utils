@@ -4,11 +4,11 @@ VERSION="3.8.1"
 
 # if Ubuntu you may have to run
 # sudo apt-get install build-essential libsqlite3-dev sqlite3 bzip2 libbz2-dev zlib1g-dev libssl-dev openssl libgdbm-dev libgdbm-compat-dev liblzma-dev libreadline-dev libncursesw5-dev libffi-dev uuid-dev
-curl https://pyenv.run | bash || echo '1'
+curl https://pyenv.run | bash
 echo 'export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-exec $SHELL
+eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+source ~/.bash_profile
 pyenv install $VERSION
 pyenv global $VERSION
 pyenv virtualenv $VERSION tools
