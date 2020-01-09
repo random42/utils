@@ -17,7 +17,7 @@ xcode-select --install
 # homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install $BREW_PKGS
-
+ssh-keygen
 
 # in case installers have added lines to .bash_profile
 # cat $HOME/.bash_profile >> $HOME/.profile

@@ -2,4 +2,5 @@
 
 brew tap mongodb/brew
 brew install mongodb-community
-# brew services start mongodb-community
+# To start:
+# > brew services start mongodb-community
