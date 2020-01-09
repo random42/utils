@@ -7,7 +7,7 @@ VERSION="3.8.1"
 curl https://pyenv.run | bash
 echo 'export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"' >> ~/.bash_profile
+eval "$(pyenv virtualenv-init -)"' >> $HOME/.profile
 source ~/.bash_profile
 pyenv install $VERSION
 pyenv global $VERSION
@@ -22,4 +22,4 @@ poetry --version
 
 # to uninstall
 # rm -rf ~/.pyenv
-# and remove lines from .bashrc
+# and remove lines from .profile

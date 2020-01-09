@@ -5,7 +5,7 @@
 
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-source ~/.bash_profile
+source $HOME/.profile
 # node
 nvm install --lts
 # yarn
