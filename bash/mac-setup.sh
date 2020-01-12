@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+PROFILE="$HOME/.profile"
+
 DIRS=(
   code
   videos
@@ -11,14 +13,14 @@ BREW_PKGS=(
   lbzip2
 )
 
+mkdir ${DIRS[@]}
+touch $PROFILE
 ssh-keygen
-mkdir $DIRS
-touch $HOME/.profile
 # xcode cli tools
 xcode-select --install
 # homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install $BREW_PKGS
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install ${BREW_PKGS[@]}
 
 # in case installers have added lines to .bash_profile
 # cat $HOME/.bash_profile >> $HOME/.profile

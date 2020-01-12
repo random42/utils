@@ -13,16 +13,16 @@ eval "$(pyenv virtualenv-init -)"
 source $HOME/.profile
 pyenv install $VERSION
 pyenv global $VERSION
+pip install --upgrade pip
 pyenv virtualenv $VERSION tools
 pyenv activate tools
 pip install poetry
 pyenv deactivate
 pyenv global $VERSION tools
-pip install --upgrade pip
 python --version
 poetry --version
 
 
 # to uninstall
 # rm -rf ~/.pyenv
-# and remove lines from .profile
+# and remove lines from profile

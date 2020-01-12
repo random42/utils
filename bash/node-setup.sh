@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# see https://github.com/nvm-sh/nvm#install--update-script
-# using master tree instead of version tag
-
 # nvm
-brew install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+source $PROFILE
 # node
 nvm install --lts
 # yarn
