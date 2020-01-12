@@ -20,6 +20,7 @@ pip install poetry
 pyenv deactivate
 pyenv global $VERSION tools
 python --version
+pip --version
 poetry --version
 
 
