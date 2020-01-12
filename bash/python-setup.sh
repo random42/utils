@@ -19,6 +19,7 @@ pyenv activate tools
 pip install poetry
 pyenv deactivate
 pyenv global $VERSION tools
+poetry config virtualenvs.in-project true
 python --version
 pip --version
 poetry --version
